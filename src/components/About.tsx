@@ -29,7 +29,6 @@ export default function About() {
             {aboutParagraphs.map((para, i) => (
               <p
                 key={i}
-                ref={ref}
                 className={`reveal reveal-delay-${i + 1} ${isVisible ? 'is-visible' : ''} text-lg text-ink-300 leading-relaxed`}
               >
                 {para}

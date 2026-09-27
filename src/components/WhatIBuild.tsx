@@ -28,7 +28,6 @@ export default function WhatIBuild() {
             return (
               <div
                 key={cap.title}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group relative glass glass-hover rounded-2xl p-6 overflow-hidden`}
               >
                 <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent-500/5 rounded-full blur-2xl group-hover:bg-accent-500/10 transition-all duration-500" />

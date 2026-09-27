@@ -34,7 +34,6 @@ export default function EngineeringInterests() {
             return (
               <div
                 key={interest.title}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-5`}
               >
                 <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -53,7 +52,6 @@ export default function EngineeringInterests() {
             return (
               <div
                 key={item.title}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group rounded-2xl p-5 border border-ink-700/30 hover:border-accent-500/30 transition-all duration-300`}
               >
                 <Icon size={20} className="text-accent-400 mb-3" />

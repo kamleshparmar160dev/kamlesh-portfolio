@@ -32,7 +32,6 @@ export default function TechStack() {
             return (
               <div
                 key={skill.category}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-5`}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -69,7 +68,6 @@ export default function TechStack() {
             {techJourney.map((phase, i) => (
               <div
                 key={phase.year}
-                ref={journeyRef}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${journeyVisible ? 'is-visible' : ''} relative`}
               >
                 <div className="hidden md:flex justify-center mb-4">

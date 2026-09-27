@@ -76,14 +76,14 @@ export default function Hero() {
             </h1>
 
             {/* Terminal-style role */}
-            <div className="flex items-center gap-3 mb-6 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
+            <div className="flex flex-wrap items-center gap-3 mb-6 animate-slide-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
               <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-ink-900/80 border border-ink-700/60">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
               </div>
               <Terminal className="text-accent-400 shrink-0" size={20} />
-              <h2 className="text-base md:text-xl lg:text-2xl font-semibold text-accent-300 font-mono whitespace-nowrap overflow-hidden">
+              <h2 className="min-w-0 text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-accent-300 font-mono break-words">
                 {typed}
                 <span className={`inline-block w-[2px] h-5 md:h-6 lg:h-7 bg-accent-400 ml-0.5 align-middle transition-opacity ${showCursor ? 'opacity-100' : 'opacity-0'}`} />
               </h2>

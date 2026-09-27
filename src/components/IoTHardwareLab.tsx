@@ -96,19 +96,16 @@ function LabCard({
   project,
   index,
   isVisible,
-  refEl,
 }: {
   project: typeof iotProjects[number];
   index: number;
   isVisible: boolean;
-  refEl: (el: HTMLDivElement | null) => void;
 }) {
   const Icon = iconMap[project.icon] ?? Cpu;
   const hasDiagram = project.diagram !== null;
 
   return (
     <div
-      ref={refEl}
       className={`reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'is-visible' : ''} group relative rounded-2xl overflow-hidden`}
     >
       {/* Hover glow */}
@@ -208,7 +205,7 @@ export default function IoTHardwareLab() {
         </div>
 
         {/* Lab status bar */}
-        <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} mb-6 flex flex-wrap items-center gap-4 px-4 py-3 rounded-xl glass border border-ink-700/40`}>
+        <div className={`reveal ${isVisible ? 'is-visible' : ''} mb-6 flex flex-wrap items-center gap-4 px-4 py-3 rounded-xl glass border border-ink-700/40`}>
           <div className="flex items-center gap-2 text-xs font-mono text-ink-400">
             <Zap size={14} className="text-accent-400" />
             <span>LAB STATUS</span>
@@ -238,15 +235,12 @@ export default function IoTHardwareLab() {
               project={project}
               index={i}
               isVisible={isVisible}
-              refEl={(el: HTMLDivElement | null) => {
-                if (el) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el;
-              }}
             />
           ))}
         </div>
 
         {/* Footer note */}
-        <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} mt-8 flex items-center justify-center gap-2 text-sm text-ink-500`}>
+        <div className={`reveal ${isVisible ? 'is-visible' : ''} mt-8 flex items-center justify-center gap-2 text-sm text-ink-500`}>
           <ShieldCheck size={16} className="text-accent-400" />
           <span className="font-mono">Personal projects — built for learning and practical use</span>
         </div>

@@ -33,7 +33,6 @@ export default function AIAutomation() {
             return (
               <div
                 key={area.title}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-5`}
               >
                 <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -46,7 +45,7 @@ export default function AIAutomation() {
           })}
         </div>
 
-        <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} mt-8`}>
+        <div className={`reveal ${isVisible ? 'is-visible' : ''} mt-8`}>
           <div className="flex items-start gap-3 px-5 py-4 rounded-xl glass border border-ink-700/50">
             <Info size={18} className="text-accent-400 mt-0.5 shrink-0" />
             <p className="text-sm text-ink-400 leading-relaxed">

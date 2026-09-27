@@ -24,7 +24,6 @@ export default function Experience() {
             {experience.map((job, i) => (
               <div
                 key={job.company}
-                ref={ref}
                 className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} relative ${
                   i % 2 === 0 ? 'md:pr-1/2 md:pl-0' : 'md:pl-1/2 md:ml-auto'
                 } pl-12 md:pl-0`}

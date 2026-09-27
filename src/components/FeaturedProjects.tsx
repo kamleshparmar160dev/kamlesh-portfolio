@@ -17,14 +17,12 @@ function FeaturedCard({
   index,
   isExpanded,
   onToggle,
-  refEl,
   isVisible,
 }: {
   project: typeof featuredProjects[number];
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
-  refEl: (el: HTMLDivElement | null) => void;
   isVisible: boolean;
 }) {
   const Icon = projectIcons[project.name] ?? Layers;
@@ -32,7 +30,6 @@ function FeaturedCard({
 
   return (
     <div
-      ref={refEl}
       className={`reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'is-visible' : ''} group relative md:col-span-2 rounded-2xl overflow-hidden`}
     >
       {/* Top accent line */}
@@ -152,14 +149,12 @@ function StandardCard({
   index,
   isExpanded,
   onToggle,
-  refEl,
   isVisible,
 }: {
   project: typeof featuredProjects[number];
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
-  refEl: (el: HTMLDivElement | null) => void;
   isVisible: boolean;
 }) {
   const Icon = projectIcons[project.name] ?? Layers;
@@ -167,7 +162,6 @@ function StandardCard({
 
   return (
     <div
-      ref={refEl}
       className={`reveal reveal-delay-${Math.min(index + 1, 5)} ${isVisible ? 'is-visible' : ''} group relative rounded-2xl overflow-hidden`}
     >
       {/* Hover glow */}
@@ -283,7 +277,6 @@ export default function FeaturedProjects() {
               index: i,
               isExpanded: expanded === i,
               onToggle: () => setExpanded(expanded === i ? null : i),
-              refEl: (el: HTMLDivElement | null) => { if (el) (ref as React.MutableRefObject<HTMLDivElement | null>).current = el; },
               isVisible,
             };
 

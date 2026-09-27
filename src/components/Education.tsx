@@ -21,7 +21,6 @@ export default function Education() {
           {education.map((edu, i) => (
             <div
               key={edu.degree}
-              ref={ref}
               className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-6`}
             >
               <div className="flex items-start gap-4">
