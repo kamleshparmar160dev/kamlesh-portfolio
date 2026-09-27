@@ -4,8 +4,8 @@ export const profile = {
   tagline: 'Building scalable web applications, APIs, mobile applications, AI-powered automation, and practical IoT solutions.',
   shortTagline: 'Full Stack · AI · Automation · APIs · IoT',
   location: 'Vadodara, Gujarat, India',
-  email: 'kamleshparmar160@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/kamlesh-parmar-2583b019/',
+  email: 'kamleshparmar160.dev@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/kamlesh-parmar-2583b019',
   github: 'https://github.com/',
   experience: '9+ years',
 };
