@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Download, Github, Linkedin, Mail, Terminal, Cpu, Radio, Brain } from 'lucide-react';
+import { ArrowRight, Download, Linkedin, Mail, Terminal, Cpu, Radio, Brain } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 
 const ROLES = ['Senior Full Stack Software Engineer'];
@@ -123,15 +123,6 @@ export default function Hero() {
               >
                 <Linkedin size={18} />
                 <span className="text-sm font-medium">LinkedIn</span>
-              </a>
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-4 py-2.5 rounded-lg glass glass-hover text-ink-300 hover:text-accent-400 transition-all"
-              >
-                <Github size={18} />
-                <span className="text-sm font-medium">GitHub</span>
               </a>
               <a
                 href={`mailto:${profile.email}`}

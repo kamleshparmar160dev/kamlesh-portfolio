@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, Heart } from 'lucide-react';
+import { Linkedin, Mail, Heart } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 
 export default function Footer() {
@@ -33,15 +33,6 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-lg glass glass-hover text-ink-400 hover:text-accent-400 transition-all"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
             </a>
             <a
               href={`mailto:${profile.email}`}

@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Navigation, Lock, Server, Image, Box, Satellite, Radio, Cpu, Cloud,
   Wifi, Code, ToggleRight, Battery, ShieldCheck, Activity, CircuitBoard,
-  Zap, ArrowDown, ChevronRight, type LucideIcon,
+  Zap, ChevronRight, type LucideIcon,
 } from 'lucide-react';
 import { iotProjects } from '@/content/portfolio';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -12,8 +12,41 @@ const iconMap: Record<string, LucideIcon> = {
   Satellite, Radio, Cpu, Cloud, Wifi, Code, ToggleRight,
 };
 
-function SignalFlow({ steps }: { steps: { label: string; icon: string }[] }) {
+function SignalFlow({
+  steps,
+  communication,
+}: {
+  steps: { label: string; icon: string }[];
+  communication: 'one-way' | 'two-way';
+}) {
   const [activeStep, setActiveStep] = useState(0);
+  const lastSegment = steps.length - 2;
+  const [signal, setSignal] = useState({ segment: 0, direction: 1 });
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setSignal((current) => {
+        if (communication === 'one-way') {
+          return {
+            segment: current.segment === lastSegment ? 0 : current.segment + 1,
+            direction: 1,
+          };
+        }
+
+        if (current.segment === lastSegment && current.direction === 1) {
+          return { ...current, direction: -1 };
+        }
+
+        if (current.segment === 0 && current.direction === -1) {
+          return { ...current, direction: 1 };
+        }
+
+        return { ...current, segment: current.segment + current.direction };
+      });
+    }, 800);
+
+    return () => window.clearInterval(interval);
+  }, [communication, lastSegment]);
 
   return (
     <div
@@ -75,13 +108,21 @@ function SignalFlow({ steps }: { steps: { label: string; icon: string }[] }) {
                 )}
               </div>
               {i < steps.length - 1 && (
-                <div className="relative flex flex-col items-center py-0.5 h-6 w-px">
-                  <div className="absolute inset-0 bg-gradient-to-b from-ink-700 to-ink-700" />
+                <div className="relative flex h-8 items-center justify-center">
+                  <div className="absolute top-0 bottom-0 w-px bg-ink-700" />
                   <div
-                    className={`absolute top-0 left-0 right-0 bg-gradient-to-b from-accent-400 to-accent-500/30 transition-all duration-500 ${
-                      activeStep === i ? 'h-full opacity-100' : 'h-0 opacity-0'
+                    className={`absolute top-0 bottom-1/2 w-px bg-accent-400 transition-opacity duration-500 ${
+                      activeStep === i ? 'opacity-100' : 'opacity-0'
                     }`}
                   />
+                  {signal.segment === i && (
+                    <span
+                      aria-hidden="true"
+                      className={`signal-flow-particle ${
+                        signal.direction === 1 ? 'signal-flow-particle-down' : 'signal-flow-particle-up'
+                      }`}
+                    />
+                  )}
                 </div>
               )}
             </div>
@@ -139,7 +180,12 @@ function LabCard({
 
           <p className="text-sm text-ink-400 leading-relaxed mb-4">{project.description}</p>
 
-          {project.diagram && <SignalFlow steps={project.diagram} />}
+          {project.diagram && (
+            <SignalFlow
+              steps={project.diagram.steps}
+              communication={project.diagram.communication}
+            />
+          )}
 
           {project.sideNote && (
             <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-ink-800/50 border border-ink-700/50 mb-4">

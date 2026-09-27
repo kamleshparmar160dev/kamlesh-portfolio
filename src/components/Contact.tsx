@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, MapPin, Send, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Send, ArrowUpRight } from 'lucide-react';
 import { profile } from '@/content/portfolio';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
@@ -58,15 +58,6 @@ export default function Contact() {
                 <span className="font-mono">{profile.location}</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-ink-700" />
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-ink-400 hover:text-accent-400 transition-colors"
-              >
-                <Github size={16} />
-                <span className="font-mono">GitHub</span>
-              </a>
             </div>
           </div>
         </div>

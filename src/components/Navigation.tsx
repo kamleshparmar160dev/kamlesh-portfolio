@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Linkedin, Mail } from 'lucide-react';
 import { navLinks, profile } from '@/content/portfolio';
 import { useActiveSection, useScrollProgress } from '@/hooks/useScrollReveal';
 
@@ -77,15 +77,6 @@ export default function Navigation() {
               <Linkedin size={18} />
             </a>
             <a
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-lg text-ink-400 hover:text-accent-400 hover:bg-ink-800/50 transition-all"
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </a>
-            <a
               href={`mailto:${profile.email}`}
               className="p-2 rounded-lg text-ink-400 hover:text-accent-400 hover:bg-ink-800/50 transition-all"
               aria-label="Email"
@@ -137,9 +128,6 @@ export default function Navigation() {
           <div className="flex items-center gap-6 mt-8">
             <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-ink-400 hover:text-accent-400 transition-colors" aria-label="LinkedIn">
               <Linkedin size={24} />
-            </a>
-            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="text-ink-400 hover:text-accent-400 transition-colors" aria-label="GitHub">
-              <Github size={24} />
             </a>
             <a href={`mailto:${profile.email}`} className="text-ink-400 hover:text-accent-400 transition-colors" aria-label="Email">
               <Mail size={24} />

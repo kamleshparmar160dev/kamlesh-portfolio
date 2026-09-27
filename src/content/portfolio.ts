@@ -5,8 +5,7 @@ export const profile = {
   shortTagline: 'Full Stack · AI · Automation · APIs · IoT',
   location: 'Vadodara, Gujarat, India',
   email: 'kamleshparmar160.dev@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/kamlesh-parmar-2583b019',
-  github: 'https://github.com/',
+  linkedin: 'https://www.linkedin.com/in/kamlesh-parmar-2583b0192',
   experience: '9+ years',
 };
 
@@ -155,13 +154,16 @@ export const iotProjects = [
       'Device configuration', 'Battery monitoring', 'Portable battery operation',
       'GPS caching', 'Network status monitoring', 'SIM status monitoring', 'Custom 3D-printed enclosure',
     ],
-    diagram: [
-      { label: 'GPS / GNSS', icon: 'Satellite' },
-      { label: 'EC200U 4G Modem', icon: 'Radio' },
-      { label: 'XIAO ESP32-S3', icon: 'Cpu' },
-      { label: 'REST API', icon: 'Cloud' },
-      { label: 'Server', icon: 'Server' },
-    ],
+    diagram: {
+      communication: 'two-way' as const,
+      steps: [
+        { label: 'GPS / GNSS', icon: 'Satellite' },
+        { label: 'EC200U 4G Modem', icon: 'Radio' },
+        { label: 'XIAO ESP32-S3', icon: 'Cpu' },
+        { label: 'REST API', icon: 'Cloud' },
+        { label: 'Server', icon: 'Server' },
+      ],
+    },
     sideNote: 'Battery Monitoring',
   },
   {
@@ -175,13 +177,16 @@ export const iotProjects = [
       'Server communication', 'Relay-controlled electronic lock', 'Device reconnect logic',
       '24/7 reliability considerations',
     ],
-    diagram: [
-      { label: 'Node.js WebSocket Server', icon: 'Server' },
-      { label: 'Wi-Fi Network', icon: 'Wifi' },
-      { label: 'ESP32-C6 Controller', icon: 'Cpu' },
-      { label: 'Relay', icon: 'ToggleRight' },
-      { label: 'Electronic Lock', icon: 'Lock' },
-    ],
+    diagram: {
+      communication: 'one-way' as const,
+      steps: [
+        { label: 'Node.js WebSocket Server', icon: 'Server' },
+        { label: 'Wi-Fi Network', icon: 'Wifi' },
+        { label: 'ESP32-C6 Controller', icon: 'Cpu' },
+        { label: 'Relay', icon: 'ToggleRight' },
+        { label: 'Electronic Lock', icon: 'Lock' },
+      ],
+    },
     sideNote: null,
   },
   {
