@@ -176,10 +176,9 @@ export const iotProjects = [
       '24/7 reliability considerations',
     ],
     diagram: [
-      { label: 'ESP32-C6', icon: 'Cpu' },
-      { label: 'Wi-Fi', icon: 'Wifi' },
-      { label: 'WebSocket Server', icon: 'Server' },
-      { label: 'Node.js', icon: 'Code' },
+      { label: 'Node.js WebSocket Server', icon: 'Server' },
+      { label: 'Wi-Fi Network', icon: 'Wifi' },
+      { label: 'ESP32-C6 Controller', icon: 'Cpu' },
       { label: 'Relay', icon: 'ToggleRight' },
       { label: 'Electronic Lock', icon: 'Lock' },
     ],
