@@ -146,6 +146,7 @@ export const featuredProjects = [
 export const iotProjects = [
   {
     name: 'Portable GPS Tracker',
+    context: 'Logical Wings hobby project',
     icon: 'Navigation',
     description: 'A portable battery-powered GPS tracker designed to obtain GPS coordinates, connect to a cellular network and send location information to a server API.',
     technologies: ['XIAO ESP32-S3', 'CAPUF EC200U', 'GPS/GNSS', '4G / Jio', 'Arduino', 'LiPo Battery', '3D-Printed Enclosure'],
@@ -168,6 +169,7 @@ export const iotProjects = [
   },
   {
     name: 'Smart Lock / IoT Lock',
+    context: 'Logical Wings hobby project',
     icon: 'Lock',
     description: 'IoT-based electronic lock controller using an ESP32 microcontroller and a Node.js WebSocket backend.',
     technologies: ['XIAO ESP32-C6', 'Wi-Fi', 'WebSockets', 'Node.js', 'Arduino', 'Relay', 'Electronic Lock'],
@@ -191,6 +193,7 @@ export const iotProjects = [
   },
   {
     name: 'Self-Hosted Home Server',
+    context: 'Personal project',
     icon: 'Server',
     description: 'Personal Linux-based server environment for file storage, network services, media management and self-hosted applications, including an installed and actively used local DNS server.',
     technologies: ['Ubuntu', 'Linux', 'Docker', 'Docker Compose', 'Samba', 'DNS', 'Caddy', 'HTTPS', 'NAS'],
@@ -204,6 +207,7 @@ export const iotProjects = [
   },
   {
     name: 'Immich Self-Hosted Photo Platform',
+    context: 'Personal project',
     icon: 'Image',
     description: 'Self-hosted photo and video backup platform using Immich for centralized personal media management.',
     technologies: ['Immich', 'Docker', 'Ubuntu', 'Linux', 'Caddy', 'HTTPS', 'NAS', 'External Storage'],
@@ -218,6 +222,7 @@ export const iotProjects = [
   },
   {
     name: '3D Printing / Hardware Experiments',
+    context: 'Personal project',
     icon: 'Box',
     description: 'Designing and manufacturing custom enclosures and prototypes using 3D printing and hardware experimentation.',
     technologies: ['Fusion 360', 'Ultimaker Cura', '3D Printing', 'Electronics', 'Robotics'],
@@ -257,7 +262,9 @@ export const experience = [
       'Code review', 'Technical collaboration', 'Production application development',
     ],
     workAreas: [
-      'Levrx Platform', 'WingsTrack', 'Mobile healthcare applications',
+      'Levrx Platform', 'WingsTrack',
+      'Portable GPS Tracker (hobby project)', 'Smart Lock / IoT Lock (hobby project)',
+      'Mobile healthcare applications',
       'Authentication and security flows', 'Passkey integration', 'API optimization',
       'DataDog integration', 'Biometric attendance integration', 'Application migrations',
       'IoT-related development',

@@ -143,7 +143,6 @@ function LabCard({
   isVisible: boolean;
 }) {
   const Icon = iconMap[project.icon] ?? Cpu;
-  const hasDiagram = project.diagram !== null;
 
   return (
     <div
@@ -160,7 +159,7 @@ function LabCard({
               <Icon size={16} className="text-accent-400" />
             </div>
             <span className="text-xs font-mono text-ink-500 uppercase tracking-wider">
-              {hasDiagram ? 'Signal Flow Diagram' : 'Hardware Project'}
+              {project.context}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -246,7 +245,7 @@ export default function IoTHardwareLab() {
             Where <span className="text-gradient-accent">software</span> meets <span className="text-gradient-accent">hardware</span>.
           </h2>
           <p className="text-ink-400 max-w-2xl text-lg">
-            Personal hardware projects and experiments bridging code, electronics, and the physical world.
+            Personal hardware projects alongside hobby projects I had the opportunity to work on through Logical Wings.
           </p>
         </div>
 

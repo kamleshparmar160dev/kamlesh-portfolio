@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Download, Linkedin, Mail, Terminal, Cpu, Radio, Brain } from 'lucide-react';
 import { profile } from '@/content/portfolio';
+import { downloadResume } from '@/utils/downloadResume';
 
 const ROLES = ['Senior Full Stack Software Engineer'];
 
@@ -105,7 +106,7 @@ export default function Hero() {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => scrollTo('#contact')}
+                onClick={() => { void downloadResume(); }}
                 className="group inline-flex items-center gap-2 px-6 py-3.5 glass glass-hover text-ink-200 font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Download size={18} className="group-hover:text-accent-400 transition-colors" />

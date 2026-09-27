@@ -612,15 +612,15 @@ Mobile food-ordering application.
 
 ## Overview
 
-Software development is not my only area of interest. I enjoy building physical technology projects and experimenting with electronics, IoT, GPS, automation, robotics and 3D printing.
+Software development is not my only area of interest. This lab includes personal projects as well as hobby projects I had the opportunity to work on through Logical Wings. The Portable GPS Tracker and Smart Lock / IoT Lock were Logical Wings hobby projects; the remaining entries are personal projects.
 
-My personal projects combine:
+These projects combine:
 
 > Software + Hardware + Connectivity + Automation
 
 ---
 
-# 19. Portable GPS Tracker
+# 19. Portable GPS Tracker — Logical Wings Hobby Project
 
 **Technologies / Hardware:**
 
@@ -672,7 +672,7 @@ XIAO ESP32-S3
 
 ---
 
-# 20. Smart Lock / IoT Lock
+# 20. Smart Lock / IoT Lock — Logical Wings Hobby Project
 
 **Technologies:**
 
