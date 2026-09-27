@@ -1,13 +1,16 @@
+import { lazy, Suspense } from 'react';
 import {
-  Code, Brain, Radio, Server, Bot, Box,
+  Code, Brain, Radio, Server, Bot, Box, Leaf,
   Wrench, BookOpen, FlaskConical, GitMerge,
   type LucideIcon,
 } from 'lucide-react';
 import { engineeringInterests, engineeringPhilosophy } from '@/content/portfolio';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 
+const PlantGrowBagScene = lazy(() => import('@/components/PlantGrowBagScene'));
+
 const iconMap: Record<string, LucideIcon> = {
-  Code, Brain, Radio, Server, Bot, Box,
+  Code, Brain, Radio, Server, Bot, Box, Leaf,
   Wrench, BookOpen, FlaskConical, GitMerge,
 };
 
@@ -31,14 +34,25 @@ export default function EngineeringInterests() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {engineeringInterests.map((interest, i) => {
             const Icon = iconMap[interest.icon] ?? Code;
+            const isPlantGrowing = interest.title === 'Plant Growing';
             return (
               <div
                 key={interest.title}
-                className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-5`}
+                className={`reveal reveal-delay-${Math.min(i + 1, 5)} ${isVisible ? 'is-visible' : ''} group glass glass-hover rounded-2xl p-5 transition-all duration-300`}
               >
-                <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Icon size={20} className="text-accent-400" />
-                </div>
+                {isPlantGrowing ? (
+                  isVisible ? (
+                    <Suspense fallback={<div className="mb-4 h-44 rounded-xl border border-emerald-300/20 bg-emerald-950/40 sm:h-48" />}>
+                      <PlantGrowBagScene />
+                    </Suspense>
+                  ) : (
+                    <div className="mb-4 h-44 rounded-xl border border-emerald-300/20 bg-emerald-950/40 sm:h-48" />
+                  )
+                ) : (
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 bg-accent-500/10 border border-accent-500/20">
+                    <Icon size={20} className="text-accent-400" />
+                  </div>
+                )}
                 <h3 className="text-base font-bold text-ink-100 mb-1.5">{interest.title}</h3>
                 <p className="text-sm text-ink-400 leading-relaxed">{interest.description}</p>
               </div>

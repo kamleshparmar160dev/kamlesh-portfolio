@@ -422,6 +422,7 @@ export const engineeringInterests = [
   { icon: 'Server', title: 'Infrastructure', description: 'Learning and experimenting with Linux, Docker, networking and self-hosted services.' },
   { icon: 'Bot', title: 'Robotics', description: 'Exploring physical computing and automated systems.' },
   { icon: 'Box', title: '3D Printing', description: 'Designing and manufacturing custom enclosures and prototypes.' },
+  { icon: 'Leaf', title: 'Plant Growing', description: 'For fun, exploring plant growth, soil moisture, watering routines, and environmental conditions, with an interest in sensor-based monitoring and automation.' },
 ];
 
 export const engineeringPhilosophy = [

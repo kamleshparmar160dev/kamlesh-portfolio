@@ -125,7 +125,7 @@ export async function downloadResume() {
     y += 4;
   }
 
-  addParagraph('Hobbies: 3D printing, hardware prototyping, electronics, and robotics.', { fontSize: 9 });
+  addParagraph('Hobbies: plant growing, 3D printing, hardware prototyping, electronics, and robotics.', { fontSize: 9 });
 
   addHeading('Technical Skills');
   for (const category of skills) {
