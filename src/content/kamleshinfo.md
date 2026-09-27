@@ -231,7 +231,9 @@ Outside of professional software development, I enjoy building and experimenting
 
 ### Technologies
 
-* Angular
+* AngularJS 1.x
+* Angular 4
+* Hybrid application development
 * Node.js
 * REST APIs
 * JavaScript / TypeScript
@@ -239,7 +241,8 @@ Outside of professional software development, I enjoy building and experimenting
 ### Responsibilities
 
 * Full-stack application development
-* Angular frontend development
+* Angular hybrid application development
+* AngularJS 1.x to Angular 4 migration
 * Node.js backend development
 * API development and integration
 * Application maintenance
@@ -1058,7 +1061,7 @@ The portfolio should organize projects into four primary categories.
 
 ## LinkedIn
 
-https://www.linkedin.com/in/kamlesh-parmar-2583b019/
+https://www.linkedin.com/in/kamlesh-parmar-2583b0192/
 
 LinkedIn profile:
 

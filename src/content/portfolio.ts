@@ -269,9 +269,10 @@ export const experience = [
     location: 'Vadodara, Gujarat, India',
     duration: 'May 2022 – July 2022',
     role: 'Full Stack Developer',
-    technologies: ['Angular', 'Node.js', 'REST APIs', 'JavaScript', 'TypeScript'],
+    technologies: ['AngularJS 1.x', 'Angular 4', 'Node.js', 'REST APIs', 'JavaScript', 'TypeScript'],
     responsibilities: [
-      'Full-stack application development', 'Angular frontend development',
+      'Full-stack application development', 'Angular hybrid application development',
+      'AngularJS 1.x to Angular 4 migration',
       'Node.js backend development', 'API development and integration',
       'Application maintenance',
     ],
