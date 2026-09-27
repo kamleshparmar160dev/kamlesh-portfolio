@@ -187,11 +187,11 @@ export const iotProjects = [
   {
     name: 'Self-Hosted Home Server',
     icon: 'Server',
-    description: 'Personal Linux-based server environment used for file storage, network services, media management and self-hosted applications.',
+    description: 'Personal Linux-based server environment for file storage, network services, media management and self-hosted applications, including an installed and actively used local DNS server.',
     technologies: ['Ubuntu', 'Linux', 'Docker', 'Docker Compose', 'Samba', 'DNS', 'Caddy', 'HTTPS', 'NAS'],
     features: [
       'Ubuntu server administration', 'Docker services', 'Network file sharing',
-      'Samba NAS', 'Local DNS', 'HTTPS', 'Reverse proxy', 'Remote access',
+      'Samba NAS', 'Installed and used local DNS server', 'HTTPS', 'Reverse proxy', 'Remote access',
       'Automatic service startup', 'Storage management', 'Self-hosted applications',
     ],
     diagram: null,
