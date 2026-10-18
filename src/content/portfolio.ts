@@ -348,6 +348,11 @@ export const skills = [
     items: ['VS Code', 'SourceTree', 'Git', 'Sublime Text', 'PhpStorm', 'Jira', 'Jenkins', 'Bitbucket', 'WSL', 'PyCharm', 'Ollama', 'Fusion 360', 'Ultimaker Cura'],
   },
   {
+    category: 'Cloud & Deployment',
+    icon: 'Server',
+    items: ['Cloudflare Workers', 'Wrangler', 'Vercel'],
+  },
+  {
     category: 'AI & Automation',
     icon: 'Brain',
     items: ['AI API Integration', 'AI-Assisted Development', 'AI-Powered Automation', 'Local LLMs', 'Ollama', 'Cursor', 'Claude Code', 'Developer Productivity', 'Automated Workflows'],
