@@ -350,7 +350,7 @@ export const skills = [
   {
     category: 'Cloud & Deployment',
     icon: 'Server',
-    items: ['Cloudflare Workers', 'Cloudflare Tunnel', 'Wrangler', 'Vercel'],
+    items: ['Cloudflare Workers', 'Cloudflare Tunnel', 'Wrangler'],
   },
   {
     category: 'AI & Automation',
