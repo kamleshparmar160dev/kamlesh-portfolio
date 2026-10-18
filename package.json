@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "yarn install && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "deploy": "yarn install && yarn build && sudo rsync -a --delete dist/ /var/www/portfolio/",
+    "preview": "vite preview",
+    "deploy": "yarn build && sudo rsync -a --delete dist/ /var/www/portfolio/",
     "deploy:cloudflare": "yarn build && wrangler deploy"
   },
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "jspdf": "^4.2.1",
     "lucide-react": "^0.446.0",
